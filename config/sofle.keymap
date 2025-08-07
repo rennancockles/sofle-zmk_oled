@@ -30,7 +30,6 @@
 
     keymap {
         compatible = "zmk,keymap";
-        startup-macros = <&rgb_ug RGB_UNDERGLOW_OFF>;
 
         default_layer {
             display-name = "default";
