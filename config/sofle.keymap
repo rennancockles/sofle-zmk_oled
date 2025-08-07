@@ -30,6 +30,7 @@
 
     keymap {
         compatible = "zmk,keymap";
+        startup-macros = <&rgb_ug RGB_UNDERGLOW_OFF>;
 
         default_layer {
             display-name = "default";
@@ -87,11 +88,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans        &trans    &trans         &trans  &trans
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP  &trans        &kp UP    &trans         &trans  &kp DELETE
-&trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PG_DN  &kp LEFT      &kp DOWN  &kp RIGHT      &trans  &trans
-&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans     &kp LC(LEFT)  &trans    &kp LC(RIGHT)  &trans  &trans
-                          &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans        &trans    &trans
+&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans        &trans    &trans         &trans  &trans
+&trans      &kp INS         &kp PSCRN         &kp K_CMENU   &trans        &trans                          &kp PG_UP  &trans        &kp UP    &trans         &trans  &kp DELETE
+&trans      &trans          &kp LA(LS(DOWN))  &trans        &trans        &kp CLCK                        &kp PG_DN  &kp LEFT      &kp DOWN  &kp RIGHT      &trans  &trans
+&trans      &kp LG(K_UNDO)  &kp LG(X)         &kp LG(C)     &kp LG(V)     &trans        &trans    &trans  &trans     &kp LC(LEFT)  &trans    &kp LC(RIGHT)  &trans  &trans
+                            &trans            &trans        &trans        &trans        &trans    &trans  &trans     &trans        &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -107,11 +108,11 @@
 
             display-name = "adjust";
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none  &none  &none  &none  &none  &none
-&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none  &none  &none  &none  &none
-&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none  &none  &none  &none  &none  &none
-&none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
-                                    &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
+&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &kp LC(LS(LG(NUMBER_4)))  &none  &none  &none  &none  &none
+&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none                     &none  &none  &none  &none  &none
+&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none                     &none  &none  &none  &none  &none
+&none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none                     &none  &none  &none  &none  &none
+                                    &none            &none            &none            &none            &none              &none  &none                     &none  &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
