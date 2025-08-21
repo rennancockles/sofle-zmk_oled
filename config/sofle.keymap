@@ -41,6 +41,15 @@
 
             tap-ms = <120>;
         };
+
+        msc_scroll_h: msc_scroll_h {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "Mouse Scroll H";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+
+            tap-ms = <120>;
+        };
     };
 
     keymap {
@@ -109,7 +118,7 @@
                        &trans            &trans                &trans                    &trans  &trans    &trans  &trans     &trans        &trans            &trans
             >;
 
-            sensor-bindings = <&msc_scroll>, <&inc_dec_kp PAGE_DOWN PG_UP>;
+            sensor-bindings = <&msc_scroll>, <&msc_scroll_h>;
         };
 
         adjust_layer {
