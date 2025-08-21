@@ -33,17 +33,6 @@
         };
     };
 
-    behaviors {
-        msc_scroll: msc_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "Mouse Scroll";
-            # sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <120>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
