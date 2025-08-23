@@ -78,7 +78,7 @@
                 <&inc_dec_kp PAGE_DOWN PG_UP>;
         };
 
-        lower_layer {
+        raise_layer {
             display-name = "lower";
 
             // TODO: Some binds are waiting for shifted keycode support.
@@ -98,9 +98,10 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            label = "Raise";
         };
 
-        raise_layer {
+        drop_layer {
             display-name = "raise";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -119,6 +120,8 @@
             >;
 
             sensor-bindings = <&msc_scroll>, <&msc_scroll_h>;
+
+            label = "Drop";
         };
 
         adjust_layer {
